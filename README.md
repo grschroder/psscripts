@@ -1,2 +1,2 @@
 # psscripts
-This is my personal repository that contains PowerShell scripts.
+This repository contains scripts that I use or used some day.
