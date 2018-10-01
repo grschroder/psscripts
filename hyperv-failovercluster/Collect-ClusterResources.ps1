@@ -1,9 +1,10 @@
-#Author: https://github.com/grschroder
-#Description: This script will collect the physical resources from a failover cluster.
-#Tested on: Win 2012 R2
+#Author: Guilherme Schroder
+#Link: https://github.com/grschroder
+#Description: This script will collect the physical resources from a failover cluster in 2012 R2 System.
+#Last Modified: 01/10/2018
+#Last Modified by: Leonardo Souza - https://github.com/leonardomv1
 
-#Change the name below to the target cluster: e.g.: "cluster01","cluster02"
-$Clouds = "cluster01"
+$Clouds = Read-Host "Type the cluster name. Example: Cloud01"
 ############################################
 Import-Module FailoverClusters
 
@@ -69,7 +70,7 @@ foreach($Cloud in $Clouds){
             $totalClusterUsedDisk = $csv.Partition.UsedSpace+$totalClusterUsedDisk 
         }    
     }
-    $totalClusterUsedDisk = $totalClusterUsedDisk/1TB
+    $totalClusterUsedDisk = $totalClusterUsedDisk/1TBa
     $totalClusterUsedDisk = "{0:N2}" -f $totalClusterUsedDisk
     $avgUsedClusterCPUPercentage = $avgUsedClusterCPUPercentage/$objs.Count    
     $avgUsedClusterCPUPercentage  = "{0:N2}" -f $avgUsedClusterCPUPercentage
