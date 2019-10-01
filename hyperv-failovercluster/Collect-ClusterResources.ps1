@@ -2,8 +2,7 @@
 #Description: This script will collect the physical resources from a failover cluster.
 #Tested on: Win 2012 R2
 
-#Change the name below to the target cluster: e.g.: "cluster01","cluster02"
-$Clouds = "cluster01"
+$Clouds = Read-Host "Type the Cluster Name"
 ############################################
 Import-Module FailoverClusters
 
