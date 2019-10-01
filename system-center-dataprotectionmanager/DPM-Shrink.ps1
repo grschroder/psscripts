@@ -36,7 +36,7 @@ foreach ($gp in $gps){
                      $teste2 = $Shrinklimits.ShadowCopyAreaSize/1GB
                      write-host "VM:"$d.computer "Disco:"$d.name "- NewShadowCopySize:"$teste "- OldShadowCopySize:"$teste2
                      Set-DatasourceDiskAllocation -Manual -Datasource $d -ProtectionGroup $MPG -ShadowCopyArea $Shrinkdisk
-                     write-host "Salvando o grupo"
+                     write-host "Saving group"
                      Set-ProtectionGroup $MPG -Confir:$false 
                   }
             }
