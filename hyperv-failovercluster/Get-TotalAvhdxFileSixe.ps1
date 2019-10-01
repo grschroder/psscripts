@@ -38,4 +38,4 @@ while ($i -lt $diresName.count){
 }
 
 $totalSize = $totalSize/1024/1024/1024
-write-host "Tamanho total = $totalSize GB"  -ForegroundColor Cyan
+write-host "Total Size = $totalSize GB"  -ForegroundColor Cyan
